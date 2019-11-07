@@ -88,7 +88,8 @@ namespace AplicacionGrafos.Client
         private List<Dir_Palabras_Model> _ResultPalabras(string p1, string p2)
         {
             List<Dir_Palabras_Model> _listResult = new List<Dir_Palabras_Model>();
-            Alfabeto_Model m = new Alfabeto_Model();
+            IAlfabeto alfabeto = new Alfabeto_Model();
+            Alfabeto_Model  m= new Alfabeto_Model();
             Dir_Palabras_Business _bll = new Dir_Palabras_Business();
             //Recorro la palabra uno para empezar a reemplazar 
             try
@@ -104,7 +105,7 @@ namespace AplicacionGrafos.Client
                     {
                         letra = p1.Substring(j, 1);
                         letra2 = p2.Substring(k, 1);
-                        isVocal = m.isVocal(letra);
+                        isVocal = alfabeto.isVocal(letra);
                         if (!isVocal)
                         {
                             foreach (var item in m.Consonantes)

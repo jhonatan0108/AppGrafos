@@ -148,6 +148,8 @@
             "1"});
             this.combo_cantidad.FormattingEnabled = true;
             this.combo_cantidad.Items.AddRange(new object[] {
+            "7 Caracteres",
+            "6 Caracteres",
             "5 Caracteres",
             "4 Caracteres",
             "3 Caracteres",

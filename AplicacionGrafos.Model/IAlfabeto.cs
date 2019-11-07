@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AplicacionGrafos.Model
 {
-    interface IAlfabeto
+    public interface IAlfabeto
     {
         bool isVocal(string letra);
     }
