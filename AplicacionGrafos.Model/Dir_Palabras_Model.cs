@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace AplicacionGrafos.Model
 {
-    public class Class1
+    public class Dir_Palabras_Model
     {
+        public int Id { get; set; }
+        public string Palabra { get; set; }
+        public int Cant_Letras { get; set; }
     }
 }

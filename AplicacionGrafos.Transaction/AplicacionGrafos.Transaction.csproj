@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,11 +50,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Dir_Palabras_Transaction.cs" />
+    <Compile Include="Data\Dir_Palabras.cs">
+      <DependentUpon>Palabras.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Palabras.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Palabras.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Palabras.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Palabras.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Palabras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Palabras.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\Palabras.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Palabras.Context.cs</LastGenOutput>
+      <DependentUpon>Palabras.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data\Palabras.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Palabras.edmx</DependentUpon>
+      <LastGenOutput>Palabras.cs</LastGenOutput>
+    </Content>
     <Content Include="SQL\Palabras.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Data\Palabras.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Palabras.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Data\Palabras.edmx.diagram">
+      <DependentUpon>Palabras.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AplicacionGrafos.Model\AplicacionGrafos.Model.csproj">
+      <Project>{c87c8339-cd45-4c4d-9c43-a5f1173669c5}</Project>
+      <Name>AplicacionGrafos.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

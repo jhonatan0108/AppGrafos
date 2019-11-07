@@ -37,16 +37,16 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbl_dataSet = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.combo_cantidad = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.combo_cantidad = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_Palab_Ini
             // 
-            this.txt_Palab_Ini.Location = new System.Drawing.Point(180, 102);
+            this.txt_Palab_Ini.Location = new System.Drawing.Point(6, 108);
             this.txt_Palab_Ini.Multiline = true;
             this.txt_Palab_Ini.Name = "txt_Palab_Ini";
             this.txt_Palab_Ini.Size = new System.Drawing.Size(155, 38);
@@ -74,7 +74,7 @@
             // 
             // txt_Palab_Fin
             // 
-            this.txt_Palab_Fin.Location = new System.Drawing.Point(10, 102);
+            this.txt_Palab_Fin.Location = new System.Drawing.Point(180, 108);
             this.txt_Palab_Fin.Multiline = true;
             this.txt_Palab_Fin.Name = "txt_Palab_Fin";
             this.txt_Palab_Fin.Size = new System.Drawing.Size(149, 38);
@@ -133,10 +133,29 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(588, 546);
+            this.groupBox1.Size = new System.Drawing.Size(588, 534);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Palabras";
+            // 
+            // combo_cantidad
+            // 
+            this.combo_cantidad.AutoCompleteCustomSource.AddRange(new string[] {
+            "5",
+            "4",
+            "3",
+            "2",
+            "1"});
+            this.combo_cantidad.FormattingEnabled = true;
+            this.combo_cantidad.Items.AddRange(new object[] {
+            "5 Caracteres",
+            "4 Caracteres",
+            "3 Caracteres",
+            "2 Caracteres"});
+            this.combo_cantidad.Location = new System.Drawing.Point(352, 108);
+            this.combo_cantidad.Name = "combo_cantidad";
+            this.combo_cantidad.Size = new System.Drawing.Size(142, 32);
+            this.combo_cantidad.TabIndex = 11;
             // 
             // label2
             // 
@@ -157,26 +176,6 @@
             this.label1.Size = new System.Drawing.Size(157, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Resultados Consulta";
-            // 
-            // combo_cantidad
-            // 
-            this.combo_cantidad.AutoCompleteCustomSource.AddRange(new string[] {
-            "5",
-            "4",
-            "3",
-            "2",
-            "1"});
-            this.combo_cantidad.FormattingEnabled = true;
-            this.combo_cantidad.Items.AddRange(new object[] {
-            "5 Caracteres",
-            "4 Caracteres",
-            "3 Caracteres",
-            "2 Caracteres",
-            "1 Caracter"});
-            this.combo_cantidad.Location = new System.Drawing.Point(352, 108);
-            this.combo_cantidad.Name = "combo_cantidad";
-            this.combo_cantidad.Size = new System.Drawing.Size(121, 32);
-            this.combo_cantidad.TabIndex = 11;
             // 
             // Form1
             // 

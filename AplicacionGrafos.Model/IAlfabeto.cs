@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AplicacionGrafos.Transaction
+namespace AplicacionGrafos.Model
 {
-    public class Class1
+    interface IAlfabeto
     {
+        bool isVocal(string letra);
     }
 }
